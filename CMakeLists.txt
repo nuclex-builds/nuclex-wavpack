@@ -6,7 +6,7 @@ cmake_minimum_required (VERSION 3.18)
 project(
   WavPack
   VERSION 5.7.0
-  DESCRIPTION "Very fast and highly effective data compression format"
+  DESCRIPTION "Lossless audio compression format that can handle floating point channels"
 )
 
 # This sets a bunch of compile flags and defined ${NUCLEX_COMPILER_TAG} to
@@ -91,10 +91,11 @@ set(
 )
 set(
   headerFiles
-  "build/src/wavpack_version.h"
-  "build/src/wavpack_local.h"
-  "build/src/decorr_tables.h"
-  "build/src/unpack3.h"
+  "build/include/wavpack.h"
+  #"build/src/wavpack_version.h"
+  #"build/src/wavpack_local.h"
+  #"build/src/decorr_tables.h"
+  #"build/src/unpack3.h"
 )
 
 # -------------------------------------------------------------------------------------------------
@@ -109,7 +110,7 @@ target_compile_definitions(
 
 target_include_directories(
   WavPack
-  PUBLIC "build/lib"
+  PUBLIC "build/include"
 )
 
 target_sources(
