@@ -1,4 +1,4 @@
 [submodule "build"]
 	path = build
-	url = http://devops.home/git/dbry/WavPack.git
+	url = ../../dbry/WavPack.git
 	branch = master
